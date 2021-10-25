@@ -7,9 +7,11 @@ Faça um select que retorne o/as estudantes  com a nota menor do que 7.
 Ao término atualize um dado desta tabela através de uma query de atualização.
 */
 
+-- Banco de Dados
 CREATE DATABASE db_escola;
 USE db_escola;
 
+-- Tabela estudantes
 CREATE TABLE estudantes (
 	
 	id bigint auto_increment,
@@ -22,6 +24,7 @@ CREATE TABLE estudantes (
 	CONSTRAINT id_estudantes_pk primary key (id)
 );
 
+-- Inserindo dados na tabela estudantes
 INSERT INTO estudantes (nomeALuno, dataNasc, turma, periodo, nota)
 VALUES ("Gabriel Mendes","20020129","3ºD","Noturno",6.5);
 INSERT INTO estudantes (nomeALuno, dataNasc, turma, periodo, nota)
@@ -55,5 +58,6 @@ WHERE nomeAluno LIKE 'Pedro%';
 
 SELECT id, nomeAluno "Nome do Aluno", dataNasc "Data de Nascimento", turma, periodo, nota FROM estudantes;
 
+-- DROPS
 DROP TABLE estudantes;
 DROP DATABASE db_escola;

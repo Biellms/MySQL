@@ -7,9 +7,11 @@ Faça um select que retorne os funcionaries com o salário menor do que 2000.
 Ao término atualize um dado desta tabela através de uma query de atualização.
 */
 
+-- Banco de Dados
 CREATE DATABASE db_rh;
 USE db_rh;
 
+-- Tabela funcionario
 CREATE TABLE funcionario (
 
 	idFunc bigint auto_increment,
@@ -21,6 +23,7 @@ CREATE TABLE funcionario (
 	CONSTRAINT id_rh_pk primary key (idFunc)
 );
 
+-- Inserindo dados Tabela funcionario
 INSERT INTO funcionario(nomeFunc,cargoFunc,idade,salario) VALUES ("Gabriel Mendes", "DEV Júnior", 19, 3100);
 INSERT INTO funcionario(nomeFunc,cargoFunc,idade,salario) VALUES ("Messi", "Faxineiro", 34, 1500);
 INSERT INTO funcionario(nomeFunc,cargoFunc,idade,salario) VALUES ("Cristiano Ronaldo", "Faxineiro", 36, 1400);
@@ -46,5 +49,6 @@ WHERE nomeFunc LIKE 'Messi';
 
 SELECT * FROM funcionario;
 
+-- DROPS
 DROP TABLE funcionario;
 DROP DATABASE db_rh;

@@ -7,9 +7,11 @@ Faça um select que retorne os produtos com o valor menor do que 500.
 Ao término atualize um dado desta tabela através de uma query de atualização.
 */
 
+-- Banco de dados
 CREATE DATABASE db_ecommerce;
 USE db_ecommerce;
 
+-- Tabela produtos
 CREATE TABLE produtos (
 	
 	id bigint auto_increment,
@@ -22,6 +24,7 @@ CREATE TABLE produtos (
 	CONSTRAINT id_produtos_pk primary key (id)
 );
 
+-- Inserindo dados na tabela produtos
 INSERT INTO produtos (nomeProd, descricao, categoria, valor, estrela)
 VALUES ("GEFORCE RTX 3070","PLACA DE VIDEO GIGABYTE GEFORCE RTX 3070 AORUS MASTER, LHR, 8GB, GDDR6, 256-BIT, GV-N3070AORUS M-8GD REV 2.0","Placa de video",7499,4);
 INSERT INTO produtos (nomeProd, descricao, categoria, valor, estrela)
@@ -55,5 +58,6 @@ WHERE id = 2;
 
 SELECT id, nomeProd "Nome do Produto", descricao, categoria, valor, estrela FROM produtos;
 
+-- DROPS
 DROP TABLE produtos;
 DROP DATABASE db_ecommerce;
