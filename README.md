@@ -1,6 +1,4 @@
 <div align = "center">
-  <h3>MySQL
-  <hr>
   <img width="250px" src="https://i.imgur.com/zx4aW9R.png" title="source: imgur.com"/>
   <hr>
   <h3>Exercícios de MySQL, propostos pela Generation Brasil.
