@@ -39,9 +39,11 @@ CREATE TABLE tb_personagem (
     Classe bigint NOT NULL,
     
     -- Constraints primary key e foreign key
-    CONSTRAINT id_personagem_pk primary key (idPers),
-    CONSTRAINT classe_personagem_fk foreign key (Classe) REFERENCES tb_classe (idClasse)
+    CONSTRAINT id_personagem_pk primary key (idPers)
 );
+
+-- Alterando tabela personagem
+ALTER TABLE tb_personagem ADD CONSTRAINT classe_personagem_fk foreign key (Classe) REFERENCES tb_classe (idClasse);
 
 -- Inserindo dados na tabela tb_classe
 INSERT INTO tb_classe (nomeClasse, tipoClasse)

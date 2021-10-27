@@ -36,9 +36,11 @@ CREATE TABLE tb_pizza (
     preco decimal(8,2) NOT NULL,
     categoria bigint NOT NULL,
     
-    CONSTRAINT id_pizza_pk primary key (idPizza),
-    CONSTRAINT categoria_pizza_fk foreign key (categoria) REFERENCES tb_categoria (idCategoria)
+    CONSTRAINT id_pizza_pk primary key (idPizza)
 );
+
+-- Alterando tabela pizza
+ALTER TABLE tb_pizza ADD CONSTRAINT categoria_pizza_fk foreign key (categoria) REFERENCES tb_categoria (idCategoria);
 
 -- Inserindo dados na tabela categoria
 INSERT INTO tb_categoria (tipo, tamanho) 

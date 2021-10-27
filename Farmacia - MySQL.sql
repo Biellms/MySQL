@@ -37,9 +37,11 @@ CREATE TABLE tb_produto (
     preco decimal(8,2),
     categoria bigint,
     
-	CONSTRAINT id_produto_pk primary key (idProduto),
-    CONSTRAINT categoria_produto_fk foreign key (categoria) REFERENCES tb_categoria (idCategoria)
+	CONSTRAINT id_produto_pk primary key (idProduto)
 );
+
+-- Alterando tabela produto
+ALTER TABLE tb_produto ADD CONSTRAINT categoria_produto_fk foreign key (categoria) REFERENCES tb_categoria (idCategoria);
 
 -- Inserindo dados na tabela tb_categoria
 INSERT INTO tb_categoria (nomeCategoria, descricao) -- 1
@@ -106,3 +108,8 @@ FROM tb_produto pr
 JOIN tb_categoria ca
 ON ca.idCategoria = pr.categoria
 WHERE ca.nomeCategoria LIKE 'MEDICAMENTOS%';
+
+-- DROPS
+DROP TABLE tb_categoria;
+DROP TABLE tb_produto;
+DROP DATABASE db_farmacia;
