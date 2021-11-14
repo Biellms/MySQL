@@ -6,9 +6,9 @@
   
 <hr>
 
- - <h3><a href="https://dev.mysql.com/doc/" target="_blank"><p target="_blank">MySQL Documentation</a> 
+ - <h3><a href="https://dev.mysql.com/doc/" target="_blank"><p target="_blank">MySQL Documentation 📄</a> 
 ##
-### Conteúdo
+### Conteúdo desse Repositório 📚
   * Create Database
   * Create Table
   * Primary Key / Foreign Key
